@@ -11,7 +11,9 @@ app.use(express.urlencoded()); // At place pf bpdyparser we can use Express
 
 app.use(userRouter);
 app.use("/host",hostRouter); // Common Paths if you dont want to write /host every time
-const rootDir = require("./utils/pathUtils")
+const rootDir = require("./utils/pathUtils");
+
+app.use( express.static(path.join(rootDir ,'public'))) // Making the public folder public
 
 // Adding 404
 app.use((req,res,next) => {
