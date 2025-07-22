@@ -1,0 +1,47 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #ff0050;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px); /* Adjust height to center main content */
+    padding: 1rem;
+}
+
+.card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card a {
+    color: purple;
+    text-decoration: underline;
+    font-size: 1.2rem;
+}
+
+
+/* This CSS is not executed on browser because jo bhi folders hai vo server de nahi sakta kisiko (code is private) */
+
+/* So to serve this Static Files is make a folder name public and give it in it
+
+As well as we grant access to public folder by middleware
+Syntax : app.use( express.static(path.join(rootdir , "path") ) )
+
+*/
