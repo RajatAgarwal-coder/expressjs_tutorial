@@ -1,0 +1,148 @@
+/* Reset and Base Layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 30px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Form Container */
+form {
+  background: #ffffffcc;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  max-width: 420px;
+  width: 100%;
+  animation: slideUp 0.6s ease;
+}
+
+/* Input Fields */
+form input[type="text"] {
+  width: 100%;
+  padding: 14px 16px;
+  margin: 15px 0;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+form input[type="text"]:focus {
+  border-color: #9c27b0;
+  background-color: #f3e5f5;
+  outline: none;
+}
+
+/* Submit Button */
+form input[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(to right, #7b1fa2, #e91e63);
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+  background: linear-gradient(to right, #6a1b9a, #d81b60);
+  transform: scale(1.03);
+}
+
+/* Back Link */
+a {
+  margin-top: 25px;
+  display: inline-block;
+  text-decoration: none;
+  color: #7b1fa2;
+  font-weight: bold;
+  background-color: #ffffffcc;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #4a0072;
+  background-color: #f3e5f5;
+  transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  form {
+    padding: 30px 20px;
+  }
+
+  form input[type="submit"] {
+    font-size: 15px;
+  }
+
+  a {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+/* Page Heading */
+h1 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #6a1b9a;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  position: relative;
+  animation: fadeInDown 0.6s ease;
+}
+
+h1::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #e91e63;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* Heading animation */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
