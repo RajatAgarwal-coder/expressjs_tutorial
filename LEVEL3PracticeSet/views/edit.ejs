@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Edit File Name</title>
+    <link rel="stylesheet" href="/edit.css">
+
+</head>
+<body>
+
+    <h1>Edit File Name</h1>
+    
+    <form action="/edit" method="post">
+
+        <input name="previous" type="text" placeholder="Previous Name " value="<%= filename %>">
+        <input type="text" name="newname" placeholder="New Name">
+        <input type="submit" value="Update Name">
+
+    </form>
+
+    <a href="/"> GO BACK TO HOME </a>
+
+</body>
+</html>
